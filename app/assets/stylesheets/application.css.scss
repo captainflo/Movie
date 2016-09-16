@@ -17,7 +17,9 @@
  @import "bootstrap";
 
  body {
- 	background: #AA4847;
+   background: #24C6DC; /* fallback for old browsers */
+   background: -webkit-linear-gradient(to left, #24C6DC , #514A9D); /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to left, #24C6DC , #514A9D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
  }
 
  .review_title {
@@ -31,4 +33,33 @@
  	}
  }
 
- 
+ .navbar-default{
+   background: #232526; /* fallback for old browsers */
+   background: -webkit-linear-gradient(to left, #232526 , #414345); /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to left, #232526 , #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   border-color: #232526;
+ }
+
+ @media all and (min-width: 768px) and (max-width: 1990px){
+ .col-md-3 {
+     width: 20%;
+ }
+}
+
+ @media all and (min-width: 768px) and (max-width: 992px){
+ .col-md-3 {
+     width: 25%;
+  }
+ }
+
+ @media all and (min-width: 400px) and (max-width: 768px){
+
+   .thumbnail{
+
+
+  background: #24C6DC; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #24C6DC , #514A9D); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #24C6DC , #514A9D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: none;
+ }
+}

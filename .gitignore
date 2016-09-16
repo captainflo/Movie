@@ -15,6 +15,7 @@
 /log/*
 /tmp/*
 /public/system/movies/images
+/public/system/users/avatar
 !/log/.keep
 !/tmp/.keep
 

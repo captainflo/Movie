@@ -15,6 +15,7 @@ class ReviewsController < ApplicationController
   # POST /reviews
   # POST /reviews.json
   def create
+
     @review = Review.new(review_params)
     @review.user_id = current_user.id
     @review.movie_id = @movie.id
@@ -49,7 +50,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review.destroy
     respond_to do |format|
-      format.html { redirect_to reviews_url, notice: 'Review was successfully destroyed.' }
+      format.html { redirect_to @movie, notice: 'Review was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -66,6 +67,6 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:rating, :comment)
+      params.require(:review).permit(:rating, :comment, :avatar)
     end
 end

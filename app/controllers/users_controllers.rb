@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @User.update(params[:user].permit( users_params )
+    if @user.update(params[:user].permit( user_params )
       redirect_to @post
     else
       render 'edit'

@@ -43,8 +43,12 @@
         <% else %>
           <% @reviews.each do |review| %>
             <div class="reviews">
+              <%= image_tag review.user.avatar.url(:medium), class:"avatar_review"%>
               <div class="star-rating" data-score= <%= review.rating %> ></div>
               <p><%= review.comment %></p>
+              <% if review.user.id == current_user.id %>
+                <%= link_to 'Delete', movie_review_path(@movie, review),  method: :delete, data: { confirm: 'Are you sure?'} %>
+              <% end %>
             </div>
           <% end %>
         <% end %>
